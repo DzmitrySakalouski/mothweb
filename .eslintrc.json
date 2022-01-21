@@ -1,0 +1,44 @@
+{
+  "root": true,
+  "extends": ["plugin:react/recommended", "eslint:recommended", "plugin:react/jsx-runtime"],
+  "plugins": ["prettier", "jsx", "flowtype", "jest", "react-hooks"],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {"object-curly-spacing": ["error", "always"]}
+    ],
+    "react/jsx-uses-vars": "error",
+    "jest/require-hook": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "spaced-comment": "off",
+    "no-console": "warn",
+    "consistent-return": "off",
+    "func-names": "off",
+    "object-shorthand": "off",
+    "no-process-exit": "off",
+    "no-param-reassign": "off",
+    "quotes": ["error", "single"],
+    "no-return-await": "off",
+    "no-underscore-dangle": "off",
+    "class-methods-use-this": "off",
+    "prefer-destructuring": ["error", {"object": true, "array": false}],
+    "no-unused-vars": ["error", {"argsIgnorePattern": "req|res|next|val"}],
+    "space-before-blocks": "error",
+    "jsx-quotes": ["error", "prefer-double"],
+    "newline-before-return": "error",
+    "no-shadow": "off"
+  }
+}
