@@ -2,11 +2,14 @@ import {PageItem} from './components/PageItem';
 import './main.view.scss';
 
 export const MainMovieView = () => {
+  const press = () => {
+    location.href = 'http://localhost:3000/#slide-1';
+  };
+
   return (
-    <div className="page-container">
-      <PageItem styleClass="gold" id="Iddd" />
-      <PageItem styleClass="dark" id="OIoi oio  uoi uoiuOIUOIkhbJKB " />
-      <PageItem styleClass="red" id="h7dbdnddosdcjskcksjcn" />
-    </div>
+    <PageItem href="#slide-0" styleClass="red">
+      <a href="#slide-1">Click next</a>
+      <div onClick={press}>On press</div>
+    </PageItem>
   );
 };

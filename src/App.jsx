@@ -1,7 +1,10 @@
 import {useEffect} from 'react';
 import {configureAxios} from './utils';
-import {MainMovieView} from './views/MainView/main.view';
-import './index.css';
+import './index.scss';
+import {AppView} from './views/AppView/app.view';
+import {QueryClient, QueryClientProvider} from 'react-query';
+
+const client = new QueryClient();
 
 function App() {
   useEffect(() => {
@@ -9,9 +12,9 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <MainMovieView />
-    </div>
+    <QueryClientProvider client={client}>
+      <AppView />
+    </QueryClientProvider>
   );
 }
 
