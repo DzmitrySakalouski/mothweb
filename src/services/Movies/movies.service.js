@@ -1,52 +1,6 @@
 import {IMAGE_BASE_URL} from '../../contants';
 import {axiosInstance} from '../../utils/axios.util';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import moment from 'moment';
-
-export const presentMovie = async () => {
-  const currentDate = moment().format('MM_dd_YYYY');
-  const keys = await AsyncStorage.getAllKeys();
-
-  if (keys.includes(currentDate)) {
-    const movie = await fetchSavedMovie(currentDate);
-
-    return movie;
-  }
-
-  return await updateMovie();
-};
-
-export const fetchSavedMovie = async dateStringKey => {
-  try {
-    const savedMovie = await AsyncStorage.getItem(dateStringKey);
-
-    return JSON.parse(savedMovie);
-  } catch (error) {
-    return error;
-  }
-};
-
-export const saveNewMovie = async movie => {
-  try {
-    const currentDate = moment().format('MM_dd_YYYY');
-    const movieString = JSON.stringify(movie);
-
-    return await AsyncStorage.setItem(currentDate, movieString);
-  } catch (error) {
-    return error;
-  }
-};
-
-export const updateMovie = async () => {
-  try {
-    const movie = await fetchMovie();
-    await saveNewMovie(movie);
-
-    return movie;
-  } catch (error) {
-    return error;
-  }
-};
+// import moment from 'moment';
 
 export const fetchMovie = async () => {
   try {

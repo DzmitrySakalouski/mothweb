@@ -1,5 +1,10 @@
-@import '../../styles/colors.scss';
-
 .slide-controls {
     display: none;
+}
+
+.main-view__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
