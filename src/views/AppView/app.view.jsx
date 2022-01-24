@@ -1,5 +1,5 @@
 import '../MainView/main.view.scss';
-import {FullPage, Slide} from 'react-full-page';
+import {FullPage, Slide} from '../../components';
 
 export const AppView = () => {
   return (
