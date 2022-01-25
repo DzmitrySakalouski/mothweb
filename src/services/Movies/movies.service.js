@@ -1,5 +1,6 @@
-import {IMAGE_BASE_URL} from '../../contants';
-import {axiosInstance} from '../../utils/axios.util';
+import {IMAGE_BASE_URL} from '../../constants';
+import {axiosInstance} from '../../utils';
+
 // import moment from 'moment';
 
 export const fetchMovie = async () => {
