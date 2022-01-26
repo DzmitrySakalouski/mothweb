@@ -11,13 +11,19 @@ export const fetchMovie = async () => {
       params: {page: randomPage},
     });
 
+    console.log('randomPageMovies', randomPageMovies);
+
     if (randomPageMovies?.results?.length) {
       const randomMovieIndexFromRange = Math.floor(
-        Math.random() * randomPageMovies.results.length,
+        Math.random() * (randomPageMovies.results.length - 1),
       );
+
+      console.log('randomMovieIndexFromRange', randomMovieIndexFromRange);
       const movieToDisplay =
         randomPageMovies.results[randomMovieIndexFromRange];
       const video = await getMovieVideo(movieToDisplay.id);
+
+      console.log('movie');
       const movie = await getMovieDetails(movieToDisplay.id);
       movie.video = video.results[0];
 
@@ -26,6 +32,8 @@ export const fetchMovie = async () => {
 
     return null;
   } catch (error) {
+    console.log({...error});
+
     return error;
   }
 };

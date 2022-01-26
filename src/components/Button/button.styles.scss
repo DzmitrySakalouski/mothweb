@@ -8,14 +8,13 @@
     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $PRIMARY 50%);
     text-decoration: none;
     font-weight: 100;
-    font-size: 1.6rem;
-    padding: 1rem 4rem;
+    font-size: 1.2rem;
+    padding: .8rem 2.7rem;
     background-size: 240%;
+    cursor: pointer;
 
     &:hover {
-        // background-color: $PRIMARY;
         color: $BACKGROUND_PRIMARY;
         background-position: 100%;
-        // transform: translateX(1rem);
     }
 }

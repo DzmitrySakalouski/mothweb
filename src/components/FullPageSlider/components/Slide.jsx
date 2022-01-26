@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const Slide = props => (
-  <div {...props} style={{...props.style, height: '100%'}}>
+  <div {...props} style={{...props.style, height: '100%', overflow: 'hidden'}}>
     {props.children}
   </div>
 );
