@@ -79,6 +79,15 @@
         width: 17rem;
         margin-bottom: 1rem;
     }
+
+    &__button {
+        opacity: 1;
+        transition: all 2s;
+
+        &-animate {
+            opacity: 0
+        }
+    }
 }
 
 @keyframes moveInLeft {

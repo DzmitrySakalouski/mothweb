@@ -20,7 +20,7 @@ export const AppView = () => {
   const navigateToDetails = () => sliderRef.current.scrollNext();
 
   const afterScroll = items => {
-    // setAnimate(items.from === 0);
+    setAnimate(items.from === 0 && items.to === 1);
   };
 
   if (isLoading && !movieData) {
@@ -48,9 +48,7 @@ export const AppView = () => {
           <MainMovieView
             movie={movieData}
             navigateToDetails={navigateToDetails}
-            animatedStyle={classNames({
-              'main-view__container-animate': animate,
-            })}
+            animate={animate}
           />
         </Slide>
         <Slide>
